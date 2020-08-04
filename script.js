@@ -13,7 +13,7 @@ const elUserScore = document.getElementById( "scoreContainer" );
 
 let theCurrentQuestion = 0;
 //const theLastQuestion = 11;
-const theLastQuestion = 8; // ***** DELETE ME FOR DEV PURPOSES ONLY AND UNCOMMENT LIVE ABOVE!!!
+const theLastQuestion = 8;
 const theQuizDuration = 75;
 // we -1 from the Duration to deal with the the setInterval function doesn't run until after the first interval has elapsed.
 let theTimeLeft = theQuizDuration - 1;
