@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <header>
+        <img src="QuizImage.jpg" alt="QuizImage" width=300px height=250px>
+
+        <h1>Test Your JavaScript Knowledge!<h1>
+                <hr class="me-hide">
+    </header>
+
+    <main>
+        </div>
+        <!-- This hides on button click. -->
+        <div class="intro">
+            <p>
+            <h3>Are you up for the challenge? </h3>
+            <br>
+            Click 'start quiz' to test your knowledge.
+            <br>
+            You have 75 seconds to play!
+            </p>
+            <button id="start">Start Quiz</button>
+        </div>
+
+        <!-- This gets updated by javascript. -->
+        <div class="timer">
+            <span class="time-left me-hide">75 seconds left</span>
+        </div>
+
+        <div class="quiz-item me-hide">
+            <p class="question">
+                The best tutor in the world is
+                <!-- comes from js -->
+            </p>
+            <ol class="answer">
+                <li class="opt1">Wes Bos</li>
+                <li class="opt2">Lee Mandell</li>
+                <li class="opt3">Tim Berners-Lee</li>
+                <li class="opt4">Jake Burch</li>
+            </ol>
+
+            <div class="answer-status">
+                <!-- right or wrong -->
+            </div>
+        </div>
+
+        <div id="scoreContainer" class="me-hide">
+            <form action="">
+                <label for="input-initials">Please enter your initials.</label>
+                <input type="text" id="user-initials">
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <hr class="me-hide">
+        &copy; Jennifer Buck 2020
+    </footer>
+
+    <script src="script.js">
+
+
+    </script>
+
+</body>
+
+</html>
