@@ -120,22 +120,6 @@ function writeNextQuestion() {
 			let myAnswerC = '';
 			let myAnswerD = '';
 
-		// switch( theCurrentQuestion ) {
-		//     case 1: 
-		//         myQuestion = quizItems.q1;
-		//         myAnswerA = quizItems.a1A;
-		//         myAnswerB = quizItems.a1B;
-		//         myAnswerC = quizItems.a1C;
-		//         myAnswerD = quizItems.a1D;
-		//     break;
-
-		//     case 2:
-
-		//     break;
-
-		//     case 3:
-		// }
-
 		elQuestion.innerHTML = quizItems[theCurrentQuestion][0];
 		elAnswerA.innerHTML = quizItems[theCurrentQuestion][1];
 		elAnswerB.innerHTML = quizItems[theCurrentQuestion][2];
@@ -182,10 +166,7 @@ function beginQuiz() {
 	myAnswers.forEach(function( answer ){
 		answer.addEventListener( 'click', evalAnswer );
 	});
-	// elAnswerA.addEventListener( 'click', evalAnswer );
-	// elAnswerB.addEventListener( 'click', evalAnswer );
-	// elAnswerC.addEventListener( 'click', evalAnswer );
-	// elAnswerD.addEventListener( 'click', evalAnswer );
+	
 	countDownTimer();
 	writeNextQuestion();
 	elQuizFrame.classList.remove( 'me-hide');
