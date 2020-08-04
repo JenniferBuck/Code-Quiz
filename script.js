@@ -170,11 +170,6 @@ function evalAnswer( event ) {
 
 	elRightWrong.innerHTML = myAnwerStatus;
 
-	// *** This is the harder to understand, more optimized way of doing the above.
-	// if( 'opt' + quizItems[theCurrentQuestion][5] === event.target.classList[0] ) {
-	// 	alert('correct');
-	// }
-
 	theCurrentQuestion++; // Don't call until after the click is evaluated.
 	writeNextQuestion();
 }
@@ -182,7 +177,7 @@ function evalAnswer( event ) {
 function beginQuiz() {
 	elIntro.classList.add( 'me-hide' );
 	elStart.classList.add( 'me-hide' );
-	// A more elegant way to add the eventlisteners for each answer.
+	
 	myAnswers = document.querySelectorAll('.answer li');
 	myAnswers.forEach(function( answer ){
 		answer.addEventListener( 'click', evalAnswer );
