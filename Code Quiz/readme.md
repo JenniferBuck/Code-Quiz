@@ -1,1 +1,2 @@
-Coding Quiz project.
+CodeQuiz by Jennifer Buck
+--Code quiz timed quiz.  There are 75 seconds to complete the quiz.  With each incorrect answer 5 seconds are deducted from the clock.  CSS & JavaScript are used for this html.

@@ -13,7 +13,7 @@ const elUserScore = document.getElementById( "scoreContainer" );
 
 let theCurrentQuestion = 0;
 //const theLastQuestion = 11;
-const theLastQuestion = 8; // ***** DELETE ME FOR DEV PURPOSES ONLY AND UNCOMMENT LIVE ABOVE!!!
+const theLastQuestion = 8;
 const theQuizDuration = 75;
 // we -1 from the Duration to deal with the the setInterval function doesn't run until after the first interval has elapsed.
 let theTimeLeft = theQuizDuration - 1;
@@ -120,21 +120,6 @@ function writeNextQuestion() {
 			let myAnswerC = '';
 			let myAnswerD = '';
 
-		// switch( theCurrentQuestion ) {
-		//     case 1: 
-		//         myQuestion = quizItems.q1;
-		//         myAnswerA = quizItems.a1A;
-		//         myAnswerB = quizItems.a1B;
-		//         myAnswerC = quizItems.a1C;
-		//         myAnswerD = quizItems.a1D;
-		//     break;
-
-		//     case 2:
-
-		//     break;
-
-		//     case 3:
-		// }
 
 		elQuestion.innerHTML = quizItems[theCurrentQuestion][0];
 		elAnswerA.innerHTML = quizItems[theCurrentQuestion][1];
@@ -170,10 +155,6 @@ function evalAnswer( event ) {
 
 	elRightWrong.innerHTML = myAnwerStatus;
 
-	// *** This is the harder to understand, more optimized way of doing the above.
-	// if( 'opt' + quizItems[theCurrentQuestion][5] === event.target.classList[0] ) {
-	// 	alert('correct');
-	// }
 
 	theCurrentQuestion++; // Don't call until after the click is evaluated.
 	writeNextQuestion();
@@ -187,10 +168,6 @@ function beginQuiz() {
 	myAnswers.forEach(function( answer ){
 		answer.addEventListener( 'click', evalAnswer );
 	});
-	// elAnswerA.addEventListener( 'click', evalAnswer );
-	// elAnswerB.addEventListener( 'click', evalAnswer );
-	// elAnswerC.addEventListener( 'click', evalAnswer );
-	// elAnswerD.addEventListener( 'click', evalAnswer );
 	countDownTimer();
 	writeNextQuestion();
 	elQuizFrame.classList.remove( 'me-hide');
